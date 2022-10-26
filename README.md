@@ -4,7 +4,7 @@
     <!-- <img src="frontend/static/synote.svg" alt="Logo" style="filter: brightness(0) invert(1);" width="40%" height="150"> -->
   </a>
 
-  <h3 align="center">LogadApp\Router</h3>
+  <h1 align="center">LogadApp\Router</h1>
 
   <p align="center">
     <a href="https://github.com/michael-arawole/logadapp-php-router/issues">Report Bug</a>
@@ -73,6 +73,7 @@ $router->post('/contact', [Forms::class, 'contactForm']);
 $router->run();
 ```
 
+
 If you're using in a sub directory, you'll may encouter a 404 error. Use the setBasePath function after initializing the router class<br>
 ```php
 <?php
@@ -83,6 +84,7 @@ $scriptDir = str_replace('\\', '/', dirname($_SERVER['SCRIPT_NAME']));
 if ($scriptDir == "/") $scriptDir = "";
 $router->setBasePath($scriptDir);
 ```
+
 
 Setup a 404 handler
 ```php
@@ -95,6 +97,7 @@ $router->addNotFoundHandler(function($path) {
 });
 ```
 
+
 ## Using the `LogadApp\Router\Request` and `LogadApp\Router\Response` classes
 Every function the path is being router to will have 2 parameters (`Request` and `Response`)<br>
 Example:
@@ -102,11 +105,13 @@ Example:
 function myMethod(Request $request, Response $response)
 ```
 
+
 ### `LogadApp\Router\Request` class
 * `getPOSTBody()` returns the POST body
 * `getParameters()` returns the GET parameters
 * `getArguments()` returns all the named varialbles. (Ex: users/{city}/{age}, going to the url users/Lagos/30 will have arguments as 'city':'lagos', 'age':'30' as an array
 * `getRawBody()` returns http raw body using `php://input`
+
 
 ### `LogadApp\Router\Response` class
 * `write($content)` echos the content
