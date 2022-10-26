@@ -4,7 +4,7 @@
     <!-- <img src="frontend/static/synote.svg" alt="Logo" style="filter: brightness(0) invert(1);" width="40%" height="150"> -->
   </a>
 
-  <h3 align="center">synote</h3>
+  <h3 align="center">LogadApp\Router</h3>
 
   <p align="center">
     <a href="https://github.com/michael-arawole/logadapp-php-router/issues">Report Bug</a>
@@ -90,7 +90,7 @@ $router = new Router();
 
 $router->addNotFoundHandler(function($path) {
 	$message = "Route '$path' not found";
-  echo $message;
+  	echo $message;
 	// require_once __DIR__ . '/views/error-message.php';
 });
 ```
@@ -128,3 +128,21 @@ _How to install._
    ```
 3. Include the generated autoload in your file, See index.php for example
 4. If you're going to use the validator please refer to documentation by rakit
+
+<!-- CONTRIBUTING -->
+## Contributing
+
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+Don't forget to give the project a star! Thanks again!
+
+1. Fork the Project
+2. Create your Feature Branch
+3. Commit your Changes
+4. Push to the Branch
+5. Open a Pull Request
+
+<!-- CONTACT -->
+## Contact
+Michael Arawole - mycodemichael@gmail.com
