@@ -2,11 +2,11 @@
   "name": "logadapp/router",
   "description": "Custom Router Class",
   "minimum-stability": "stable",
-  "license": "proprietary",
+  "license": "MIT",
   "authors": [
     {
       "name": "Michael Arawole",
-      "email": "michael@logad.net"
+      "email": "mycodemichael@gmail.com"
     }
   ],
   "require": {

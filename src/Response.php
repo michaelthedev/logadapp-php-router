@@ -17,7 +17,6 @@ class Response {
 		header('Content-Type: application/json');
 		return $this;
 	}
-
 	public function asArray(): array {
 		return $this->body;
 	}
