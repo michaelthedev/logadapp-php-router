@@ -5,8 +5,6 @@
 // | @author_email  : logadscripts@gmail.com
 // | @date          : 07 Oct, 2022 9:25 PM
 // +------------------------------------------------------------------------+
-// | Copyright (c) 2022 Logad Networks. All rights reserved.
-// +------------------------------------------------------------------------+
 
 namespace LogadApp\Router;
 
