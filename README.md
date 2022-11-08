@@ -17,7 +17,7 @@
 
 ## About The Project
 
-Another router class, ikr
+Another router class
 
 Features
 
