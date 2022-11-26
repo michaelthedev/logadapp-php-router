@@ -12,7 +12,7 @@ class Response {
 	public $body;
 
 	public function asJson(): Response {
-		header('Content-Type: application/json');
+		header('Content-Type: application/json; charset=utf-8');
 		return $this;
 	}
 	public function asArray(): array {
