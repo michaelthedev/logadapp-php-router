@@ -135,8 +135,11 @@ $router->post('/contact', function (Request $request, Response $response) {
   ]);
   
   if (!empty($request->validationError)) {
-    return $response->error($request->validationError)
-      ->asJson();
+    return $response->write(json_encode([
+      'error' => true,
+      'message' => $request->validationError
+    ]))->asJson()
+      ->withStatus(400);
   }
 });
 ```
