@@ -15,7 +15,7 @@ declare(strict_types=1);
 namespace LogadApp\Router;
 
 class Router {
-	private string $basePath;
+	private string $basePath = '';
 	private array $handlers;
 	private const METHOD_GET = 'GET';
 	private const METHOD_POST = 'POST';
