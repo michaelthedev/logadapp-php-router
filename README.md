@@ -117,6 +117,30 @@ function myMethod(Request $request, Response $response)
 - `getArguments()` returns all the named varialbles. (Ex: users/{city}/{age}, going to the url users/Lagos/30 will have arguments as 'city':'lagos', 'age':'30' as an array
 - `getRawBody()` returns http raw body using `php://input`
 
+- #### Using `$request->validate()`
+- See Rakit\Validation for more info
+
+```php
+$router->post('/contact', function (Request $request, Response $response) {
+  $action = $request->getArguments()['action'];
+  // Post Body
+  $postBody = $request->getPOSTBody();
+  // Get parameters
+  $getBody = $request->getParameters();
+  
+  // Validation
+  $request->validate($postBody, [
+    'name' => 'required',
+    'phone' => 'required|numeric'
+  ]);
+  
+  if (!empty($request->validationError)) {
+    return $response->error($request->validationError)
+      ->asJson();
+  }
+});
+```
+
 ### `LogadApp\Router\Response` class
 
 - `write($content)` echos the content
@@ -131,10 +155,9 @@ function myMethod(Request $request, Response $response)
 
 _How to install._
 
-1. Download the github repo
-2. In the directory the extracted files are run the fllowing code to setup composer autoload
+1. Using composer
    ```javascript
-   composer install
+   composer require logadapp/router
    ```
 3. Include the generated autoload in your file, See index.php for example
 4. If you're going to use the validator please refer to documentation by rakit
